@@ -1,0 +1,38 @@
+# This file is generated from /etc/nginx/mime.types.default
+# See http://nginx.org/en/docs/http/ngx_http_core_module.html#mime_types
+
+types {
+    text/html                             html htm shtml;
+    text/css                              css;
+    text/xml                              xml;
+    image/gif                             gif;
+    image/jpeg                            jpeg jpg;
+    application/javascript                js;
+    application/json                      json;
+    application/xml                       xml;
+    application/atom+xml                  atom;
+    application/rss+xml                   rss;
+    image/webp                            webp;
+    font/woff                             woff;
+    font/woff2                            woff2;
+    application/font-woff2                woff2;
+    application/font-woff                 woff;
+    font/ttf                              ttf;
+    font/otf                              otf;
+    application/vnd.ms-fontobject        eot;
+    application/x-font-ttf                ttf;
+    application/x-font-opentype           otf;
+    application/x-shockwave-flash         swf;
+    application/x-java-applet             class;
+    application/pdf                       pdf;
+    text/plain                            txt;
+    application/zip                       zip;
+    application/octet-stream              bin exe;
+    audio/mpeg                            mp3;
+    audio/wav                             wav;
+    video/mp4                             mp4;
+    video/webm                            webm;
+    video/ogg                             ogg;
+    audio/ogg                             oga;
+    application/x-7z-compressed           7z;
+}
