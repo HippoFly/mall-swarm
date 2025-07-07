@@ -1,20 +1,16 @@
 # 通过Docker-compose部署
 
-## 1.环境部署
-### 1.1生成环境镜像
-移动compose文件，然后
-`docker-compose -f docker-compose-env.yml up -d`
+## 1.开发环境部署
+### ~~1.1 环境配置文件预先~~(废弃，看1.1a)
 
-![img.png](./img_3.png)
-![img.png](img.png)
+### 文件夹权限
 
-```SHELL
-建议对mydata文件
-chmod 777 ./mydata
+` chmod -R 775 ./mydata`
 
-```
+**logstash**
 
-### 1.3对容器配置
+首先在目标文件夹 "mydata/logstash" 复制准备好的文件
+![img.png](img_logstash_conf.png)
 
 **Nginx**
 
@@ -24,12 +20,57 @@ chmod 777 ./mydata
 # 创建目录之后将nginx.conf文件以及mime.types上传到该目录下面
 mydata/nginx/conf/
 ```
+![nginx配置文件](img_nginx_conf.png)
+
+**RabbitMq**
+
+在`mydata`父级路径命令行执行
+
+```shell
+mkdir -p ./mydata/rabbitmq/data
+mkdir -p ./mydata/rabbitmq/log
+sudo chmod -R 777 ./mydata/rabbitmq/log
+
+```
 
 
 
-**LogStash**
+### 1.1a 脚本执行预置环境
 
-- 将logstash.conf移动到  `mydata/logstash/`
+将`init.sh`放入目标文件夹执行
+
+```sh
+
+chmod +x init.sh # 赋予脚本执行权限
+
+./init.sh #执行权限
+
+```
+
+
+
+
+
+
+
+### 1.2 docker-compose启动环境容器组
+
+移动compose文件，然后
+`docker-compose -f docker-compose-env.yml up -d`
+
+![img.png](./img_3.png)
+启动后如果有容器三个失败：rabbitmq，nginx，es。代表你之前的操作没有完成
+![启动后有三个失败](img.png)
+
+
+
+### 1.3 对具体容器配置
+
+
+
+~~**LogStash**~~（1.1a已经优化，废弃）
+
+- 将`logstash.conf`移动到  `mydata/logstash/`
 
 - 需要安装`json_lines`插件，并重新启动。
 
@@ -55,7 +96,7 @@ grant all privileges on *.* to 'reader' @'%' identified by '123456';
 create database mall character set utf8;
 #使用mall数据库
 use mall;
-#导入mall.sql脚本
+#导入mall.sql脚本/ 这里你用可视化工具navicat也可以
 source /mall.sql;
 ```
 
@@ -65,6 +106,8 @@ source /mall.sql;
 
 
 **RabbitMQ**
+
+访问 `http://localhost:15672/`
 
 1,RabbitMQ创建帐号mall:mall，并设置其角色为管理员；
 ![img.png](./img5.png)
@@ -85,8 +128,10 @@ ES 需要安装ik分词器到 plugins
 导入压缩包
 
 
-### 安装完毕
+# 3.安装完毕
 
-前端访问后推荐俩账号
+前端访问后登录
+
+推荐俩账号
 macro:macro123
 admin:macro123
