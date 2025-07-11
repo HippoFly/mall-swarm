@@ -8,4 +8,4 @@ logging:
     root: info
     com.macro.mall: debug
 logstash:
-  host: localhost
+  host: ${IP_HOST:localhost}
