@@ -30,7 +30,7 @@
 
 项目演示地址： [https://www.macrozheng.com/admin/index.html](https://www.macrozheng.com/admin/index.html)
 
-![后台管理系统功能演示](./document/resource/mall_admin_show.png)
+![后台管理系统功能演示](HOW-TO-DEPLOY/scripts/resource/mall_admin_show.png)
 
 ### 前台商城系统
 
@@ -38,17 +38,17 @@
 
 项目演示地址（将浏览器切换为手机模式效果更佳）：[https://www.macrozheng.com/app/](https://www.macrozheng.com/app/)
 
-![前台商城系统功能演示](./document/resource/re_mall_app_show.jpg)
+![前台商城系统功能演示](HOW-TO-DEPLOY/scripts/resource/re_mall_app_show.jpg)
 
 ## 项目架构
 
 ### 系统架构
 
-![系统架构图](./document/resource/mall_micro_service_arch.jpg)
+![系统架构图](HOW-TO-DEPLOY/scripts/resource/mall_micro_service_arch.jpg)
 
 ### 业务架构
 
-![业务架构图](./document/resource/re_mall_business_arch.jpg)
+![业务架构图](HOW-TO-DEPLOY/scripts/resource/re_mall_business_arch.jpg)
 
 ### 组织结构
 
@@ -141,27 +141,27 @@ mall
 
 - 查看注册中心注册服务信息，访问地址：http://192.168.3.101:8848/nacos/
 
-![](./document/resource/re_mall_swarm_run_01.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_01.png)
 
 - 监控中心应用信息，访问地址：http://192.168.3.101:8101
 
-![](./document/resource/re_mall_swarm_run_02.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_02.png)
 
-![](./document/resource/re_mall_swarm_run_03.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_03.png)
 
 - API文档信息，访问地址：http://192.168.3.101:8201
 
-![](./document/resource/re_mall_swarm_run_04.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_04.png)
 
 - 日志收集系统信息，访问地址：http://192.168.3.101:5601
 
-![](./document/resource/re_mall_swarm_run_05.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_05.png)
 
 - 使用Kubernetes部署后项目运行状态，访问地址：http://192.168.3.101:30880
 
-![](document/resource/re_mall_swarm_run_06.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_06.png)
 
-![](document/resource/re_mall_swarm_run_07.png)
+![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_07.png)
 
 ## 公众号
 
