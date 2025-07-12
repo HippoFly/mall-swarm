@@ -18,37 +18,97 @@
 > 4. **Spring Cloud全套教程**：[《SpringCloud学习教程》](https://github.com/macrozheng/springcloud-learning) 。
 > 5. **分支说明**：`master`分支基于Spring Cloud 2023+Spring Boot 3.2，`dev-v2`分支基于Spring Cloud 2021+Spring Boot 2.7。
 
+
+
+## 相关连接
+
+前端-后台管理页面`mall-admin-web`地址：[后台管理](https://github.com/HippoFly/mall-app-web)
+
+前端-商城主页页面：[商业页面](https://github.com/HippoFly/mall-app-web)
+
+使用手册：[使用指导](https://github.com/HippoFly/mall-learning-manual)
+
 ## 项目简介
 
 `mall-swarm`是一套微服务商城系统，采用了 Spring Cloud 2023 & Alibaba、Spring Boot 3.2、Sa-Token、MyBatis、Elasticsearch、Docker、Kubernetes等核心技术，同时提供了基于Vue的管理后台方便快速搭建系统。`mall-swarm`在电商业务的基础集成了注册中心、配置中心、监控中心、网关等系统功能。文档齐全，附带全套Spring Cloud教程。
 
-## 项目演示
+
+
+
+
+## 如何部署
+
+如何部署参考：
+
+[部署文档](./HOW-TO-DEPLOY/deploy-docs/deploy-docker-compose.md)
+
+## 访问入口&效果
 
 ### 后台管理系统
 
-前端项目`mall-admin-web`地址：https://github.com/macrozheng/mall-admin-web
+以本机部署`localhost`为例
 
-项目演示地址： [https://www.macrozheng.com/admin/index.html](https://www.macrozheng.com/admin/index.html)
+后台管理页面地址： `localhost:8090`
 
-![后台管理系统功能演示](HOW-TO-DEPLOY/scripts/resource/mall_admin_show.png)
+![后台管理系统功能演示](IMAGES/mall_admin_show.png)
 
 ### 前台商城系统
 
-前端项目`mall-app-web`地址：https://github.com/macrozheng/mall-app-web
 
-项目演示地址（将浏览器切换为手机模式效果更佳）：[https://www.macrozheng.com/app/](https://www.macrozheng.com/app/)
 
-![前台商城系统功能演示](HOW-TO-DEPLOY/scripts/resource/re_mall_app_show.jpg)
+项目演示地址（将浏览器切换为手机模式效果更佳）：`localhost:8060`
+
+![前台商城系统功能演示](IMAGES/re_mall_app_show.jpg)
+
+
+
+### NACOS管理页面
+
+- 查看注册中心注册服务信息，访问地址：http://localhost:8848/nacos/
+
+![](IMAGES/re_mall_swarm_run_01.png)
+
+### Actuator微服务监控页面
+
+- 监控中心应用信息，访问地址：http://localhost:8101
+
+![](IMAGES/re_mall_swarm_run_02.png)
+
+![](IMAGES/re_mall_swarm_run_03.png)
+
+
+
+- API文档信息，访问地址：http://localhost:8201/doc.html
+
+![](IMAGES/re_mall_swarm_run_04.png)
+
+- 日志收集系统信息，访问地址：http://localhost:5601
+
+![](IMAGES/re_mall_swarm_run_05.png)
+
+- 使用Kubernetes部署后项目运行状态，访问地址：http://192.168.3.101:30880
+
+![](IMAGES/re_mall_swarm_run_06.png)
+
+![](IMAGES/re_mall_swarm_run_07.png)
+
+
+
+
+
+
+
+
 
 ## 项目架构
 
 ### 系统架构
 
-![系统架构图](HOW-TO-DEPLOY/scripts/resource/mall_micro_service_arch.jpg)
+![系统架构图](IMAGES/mall_micro_service_arch.jpg)
 
 ### 业务架构
 
-![业务架构图](HOW-TO-DEPLOY/scripts/resource/re_mall_business_arch.jpg)
+![业务架构图](IMAGES/re_mall_business_arch.jpg)
 
 ### 组织结构
 
@@ -132,42 +192,15 @@ mall
 | RabbitMq      | 3.10.5 | http://www.rabbitmq.com/download.html                        |
 | nginx         | 1.22   | http://nginx.org/en/download.html                            |
 
-### 搭建步骤
 
-- Windows环境搭建请参考：[mall-swarm项目后端开发环境搭建](https://cloud.macrozheng.com/start/mall_swarm_deploy_windows.html);
-- `mall-admin-web`项目的安装及部署请参考：[mall-swarm前端开发环境搭建](https://cloud.macrozheng.com/start/mall_swarm_deploy_windows_web.html);
 
-## 运行效果展示
 
-- 查看注册中心注册服务信息，访问地址：http://192.168.3.101:8848/nacos/
 
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_01.png)
 
-- 监控中心应用信息，访问地址：http://192.168.3.101:8101
 
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_02.png)
+## 原作者
 
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_03.png)
-
-- API文档信息，访问地址：http://192.168.3.101:8201
-
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_04.png)
-
-- 日志收集系统信息，访问地址：http://192.168.3.101:5601
-
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_05.png)
-
-- 使用Kubernetes部署后项目运行状态，访问地址：http://192.168.3.101:30880
-
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_06.png)
-
-![](HOW-TO-DEPLOY/scripts/resource/re_mall_swarm_run_07.png)
-
-## 公众号
-
-加微信群交流，关注公众号「**macrozheng**」，回复「**加群**」即可。
-
-![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
+原作者：「**macrozheng**」
 
 ## 许可证
 
