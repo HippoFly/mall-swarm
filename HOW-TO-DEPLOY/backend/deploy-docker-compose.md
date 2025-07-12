@@ -10,7 +10,7 @@
 **logstash**
 
 首先在目标文件夹 "mydata/logstash" 复制准备好的文件
-![img.png](img_logstash_conf.png)
+![img.png](imgs/img_logstash_conf.png)
 
 **Nginx**
 
@@ -20,7 +20,7 @@
 # 创建目录之后将nginx.conf文件以及mime.types上传到该目录下面
 mydata/nginx/conf/
 ```
-![nginx配置文件](img_nginx_conf.png)
+![nginx配置文件](imgs/img_nginx_conf.png)
 
 **RabbitMq**
 
@@ -58,9 +58,9 @@ chmod +x init.sh # 赋予脚本执行权限
 移动compose文件，然后
 `docker-compose -f docker-compose-env.yml up -d`
 
-![img.png](./img_3.png)
+![img.png](imgs/img_3.png)
 启动后如果有容器三个失败：rabbitmq，nginx，es。代表你之前的操作没有完成
-![启动后有三个失败](img.png)
+![启动后有三个失败](imgs/img.png)
 
 
 
@@ -110,13 +110,13 @@ source /mall.sql;
 访问 `http://localhost:15672/`
 
 1,RabbitMQ创建帐号mall:mall，并设置其角色为管理员；
-![img.png](./img5.png)
+![img.png](imgs/img5.png)
 2,创建一个新的虚拟host为，名称为/mall；
-![img.png](./img2.png)
+![img.png](imgs/img2.png)
 3,点击mall用户进入用户配置页面；
-![img.png](./img3.png)
+![img.png](imgs/img3.png)
 给mall用户配置该虚拟host的权限，至此，RabbitMQ的配置完成。
-![img.png](./img4.png)
+![img.png](imgs/img4.png)
 
 **ES**
 ES 需要安装ik分词器到 plugins
