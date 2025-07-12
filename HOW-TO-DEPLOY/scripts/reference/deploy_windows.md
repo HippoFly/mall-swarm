@@ -40,19 +40,19 @@
 - 直接运行com.macro.mall.MallAdminApplication的main函数即可；
 - 通过`mall-gateway`网关服务访问接口文档：http://localhost:8201/mall-admin/swagger-ui.html
 
-![](../resource/mall_swarm_windows_06.png)
+![](../../../IMAGES/mall_swarm_windows_06.png)
 
 - 登录接口地址：http://localhost:8201/mall-admin/admin/login
 - 访问登录接口获取到token后放入认证的头信息即可正常访问其他需要登录的接口：
 
-![](../resource/mall_swarm_windows_09.png)
+![](../../../IMAGES/mall_swarm_windows_09.png)
 
 ### 启动前台服务`mall-portal`
 
 - 直接运行com.macro.mall.portal.MallPortalApplication的main函数即可；
 - 通过`mall-gateway`网关服务访问接口文档：http://localhost:8201/mall-portal/swagger-ui.html
 
-![](../resource/mall_swarm_windows_07.png)
+![](../../../IMAGES/mall_swarm_windows_07.png)
 
 - 登录接口地址：http://localhost:8201/mall-portal/sso/login
 - 调用需要登录的接口方式同`mall-admin`。
@@ -62,14 +62,14 @@
 - 直接运行com.macro.mall.search.MallSearchApplication的main函数即可；
 - 通过`mall-gateway`网关服务访问接口文档：http://localhost:8201/mall-search/swagger-ui.html
 
-![](../resource/mall_swarm_windows_10.png)
+![](../../../IMAGES/mall_swarm_windows_10.png)
 
 ### 启动测试服务`mall-demo`
 
 - 直接运行com.macro.mall.MallAdminApplication的main函数即可；
 - 通过`mall-gateway`网关服务访问接口文档：http://localhost:8201/mall-demo/swagger-ui.html
 
-![](../resource/mall_swarm_windows_08.png)
+![](../../../IMAGES/mall_swarm_windows_08.png)
 
 - 可以通过调用FeignAdminController、FeignPortalController、FeignSearchController来测试使用Feign的远程调用功能。
 
@@ -77,18 +77,18 @@
 
 - 注册中心服务信息：
 
-![](../resource/mall_swarm_windows_01.png)
+![](../../../IMAGES/mall_swarm_windows_01.png)
 
 - 监控中心服务概览信息：
 
-![](../resource/mall_swarm_windows_02.png)
+![](../../../IMAGES/mall_swarm_windows_02.png)
 
-![](../resource/mall_swarm_windows_03.png)
+![](../../../IMAGES/mall_swarm_windows_03.png)
 
 - 监控中心单应用详情信息：
 
-![](../resource/mall_swarm_windows_04.png)
+![](../../../IMAGES/mall_swarm_windows_04.png)
 
-![](../resource/mall_swarm_windows_05.png)
+![](../../../IMAGES/mall_swarm_windows_05.png)
 
 
